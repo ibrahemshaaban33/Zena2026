@@ -390,7 +390,7 @@
 </label>
 <div class="flex flex-col sm:flex-row gap-2">
 <div class="relative flex-1">
-<input class="w-full h-11 px-3 pl-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/40 border border-surface-container-high shadow-sm" id="admin-pass-input" placeholder="اكتب كلمة السر هنا..." type="password">
+<input class="w-full h-11 px-3 pl-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/40 border border-surface-container-high shadow-sm" id="admin-pass-input" placeholder="أدخل كلمة المرور المصرح بها..." type="password">
 <button class="absolute left-2.5 top-2.5 text-outline hover:text-on-surface" id="toggle-pass-visibility" type="button">
 <span class="material-symbols-outlined text-[20px]">visibility</span>
 </button>
@@ -400,7 +400,7 @@
 <span class="material-symbols-outlined text-[18px]">login</span>
 </button>
 </div>
-<div class="hidden text-body-sm font-body-sm font-semibold rounded-lg p-2.5" id="password-feedback"></div>
+<p class="text-[12px] font-body-sm text-outline flex items-center gap-1 mt-0.5 select-none"><span class="material-symbols-outlined text-[15px] text-secondary">info</span><span class="">تلميح: الرقم السري الخاص بإدارة المصنع المعتمد</span></p><div class="hidden text-body-sm font-body-sm font-semibold rounded-lg p-2.5" id="password-feedback"></div>
 </div>
 </div>
 <!-- لوحة التحكم الإدارية الكاملة (تظهر عند إدخال الباسورد الصحيح 0115665) -->
@@ -782,16 +782,14 @@
 </button>
 </div>
 <div class="flex flex-col gap-2">
-<p class="font-body-sm text-body-sm text-on-surface-variant" id="auth-modal-description">هذا الإجراء مخصص لإدارة المصنع. يرجى إدخال رمز الأمان المصرح به (0115665):</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="auth-modal-description">هذا الإجراء مخصص لإدارة المصنع. يرجى إدخال رمز الأمان المصرح به للمتابعة:</p>
 <div class="relative w-full mt-1">
-<input class="w-full h-11 px-3 pl-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/40 border border-surface-container-high font-mono tracking-widest text-center" id="action-auth-pass-input" placeholder="•••••••" type="password">
+<input class="w-full h-11 px-3 pl-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/40 border border-surface-container-high font-mono tracking-widest text-center" id="action-auth-pass-input" placeholder="أدخل كلمة المرور المصرح بها..." type="password">
 <button class="absolute left-2.5 top-2.5 text-outline hover:text-on-surface" id="action-toggle-pass-visibility" type="button">
 <span class="material-symbols-outlined text-[20px]">visibility</span>
 </button>
 </div>
-<div class="hidden text-body-sm font-semibold rounded-lg p-2 mt-1 bg-error-container text-on-error-container" id="action-auth-error">
-      عفواً كلمة المرور غير صحيحة، يرجى إدخال 0115665
-    </div>
+<p class="text-[11px] font-body-sm text-outline flex items-center justify-center gap-1 mt-1 select-none"><span class="material-symbols-outlined text-[14px] text-secondary">lock_clock</span><span class="">تلميح: الرقم السري الخاص بإدارة المصنع المعتمد</span></p><div class="hidden text-body-sm font-semibold rounded-lg p-2 mt-1 bg-error-container text-on-error-container" id="action-auth-error">عفواً، كلمة المرور غير صحيحة. يرجى إدخال رمز الأمان المعتمد لإدارة المصنع.</div>
 </div>
 <div class="flex items-center gap-2 pt-1">
 <button class="flex-1 h-11 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg font-bold hover:bg-secondary/90 shadow transition-all flex items-center justify-center gap-1.5" id="action-auth-confirm-btn">
